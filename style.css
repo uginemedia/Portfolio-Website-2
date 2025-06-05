@@ -1,0 +1,1005 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Switch Mode Design */
+.switch-mode {
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    z-index: 10;
+}
+
+.switch-mode button {
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+body.dark {
+    background: #191919;
+}
+
+body.dark .switch-mode button {
+    background: #191919;
+    color: #fff;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Switch Mode End */
+
+/* Scroll To Top Design */
+.scroll-to-top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 10;
+}
+
+.scroll-to-top a {
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #F9004D;
+}
+
+body.dark .scroll-to-top a {
+    background: #191919;
+    color: #fff;
+    box-shadow: inset 2px -2px 5px rgba(255, 255, 255, 0.2);
+}
+/* Scroll To Top End */
+
+
+/* Header Design */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    padding-bottom: 10px;
+    background: transparent;
+    z-index: 100;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.links li {
+    position: relative;
+    display: inline;
+    margin: 0 15px;
+    
+}
+
+.links li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 10px;
+    transition: all 0.3s ease-in;
+}
+
+body.dark header .links li a {
+    color: #fff;
+}
+
+.links li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 50px;
+    background: #F9004D;
+    transition: all 0.3s ease-in;
+}
+
+.links li a:hover, .links li a:hover::before {
+    color: #F9004D;
+    width: 100%;
+}
+
+body.dark .links li a:hover, .links li a:hover::before {
+    color: #F9004D;
+    width: 100%;
+}
+
+.socials a {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in;
+}
+
+.socials a:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.hire {
+    padding: 12px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.3s ease-in;
+}
+
+.hire:hover {
+    background: #F9004D;
+    transform: translateY(-5px);
+    border-color: #F9004D;
+}
+
+.menu {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    color: #111111;
+    display: none;
+}
+
+body.dark .menu {
+    color: #fff;
+}
+
+/* Header End */
+
+/* Hero Section */
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 11%;
+    background: url('./img/hero.jpg') no-repeat center center/cover;
+}
+
+.hero-texts {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-texts > span {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 5px;
+    font-size: 1.2em;
+}
+
+.hero-texts h1, h2 {
+    color: #fff;
+}
+
+.hero-texts h1 {
+    text-transform: capitalize;
+    font-size: 5em;
+}
+
+.hero-texts h1 span {
+    color: #F9004D;
+}
+
+.hero-texts h2 {
+    font-size: 4em;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: none;
+}
+
+body.dark .hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero End */
+
+
+/* About Section Design */
+.about {
+    margin-top: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding: 0 10%;
+    padding-bottom: 7%;
+}
+
+.about-img {
+    width: 100%;
+}
+
+.about-img img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.about-texts h2 {
+    color: #111111;
+    font-size: 3.5em;
+}
+
+.about-texts p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.about-details {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.about-details > div > div {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.about-details > div > div span {
+    font-weight: 800;
+}
+
+body.dark .about-texts h2 {
+    color: #fff;
+}
+
+body.dark .about-texts p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark .about-details {
+    color: rgba(255, 255, 255, 0.5);
+}
+/* About End */
+
+/* Service Section Design */
+.service {
+    background: #F8F9FC;
+    padding: 7% 10%;
+}
+
+/* Global Style */
+.title > h2 {
+    text-align: center;
+    font-size: 3.5em;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.title > p {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+/* Global Style End */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.services > div {
+    background: #f2f2f2;
+    padding: 4em 3em;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.services > div ion-icon {
+    font-size: 3em;
+    color: #F9004D;
+}
+
+.services > div h4 {
+    font-size: 1.6em;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.services > div p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.services > div:hover {
+    background: linear-gradient(to right, #f93600, #F9004D);
+    transform: translateY(-10px);
+}
+
+.services > div:hover ion-icon {
+    color: #fff;
+}
+
+.services > div:hover h4 {
+    color: #fff;
+}
+
+.services > div:hover p {
+    color: #fff;
+}
+
+body.dark .service {
+    background: #111111;
+}
+
+body.dark .title h2 {
+    color: #fff;
+}
+
+body.dark .title p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark .services > div {
+    background: #000;
+}
+
+body.dark .services > div h4 {
+    color: #fff;
+}
+
+body.dark .services > div p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark .services > div:hover {
+    background: linear-gradient(to right, #f93600, #F9004D);
+}
+/* Service End */
+
+/* Project Section Design */
+.project {
+    padding: 7% 10%;
+    text-align: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.projects > div {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.projects > div:hover {
+    transform: scale(1.05);
+}
+
+.projects > div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.projects > div .project-texts {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 90%;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.projects > div > div span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.projects > div > div h4 {
+    font-size: 1.4em;
+    margin: 20px 0;
+}
+
+.projects > div > div button {
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+}
+
+.projects > div > div button:hover {
+    background: #F9004D;
+    color: #fff;
+    transform: translateY(-5px);
+    border-color: #F9004D;
+}
+
+.projects > div .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #F9004D, transparent);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.projects > div:hover  .project-overlay {
+    opacity: 1;
+}
+
+.project > button {
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px 40px;
+    cursor: pointer;
+    border: 1px solid #F9004D;
+    background: #F9004D;
+    color: #fff;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+}
+
+.project > button:hover {
+    background: transparent;
+    transform: translateY(-5px);
+    color: #F9004D;
+}
+/* Project End */
+
+/* Blog Section Design */
+.blog {
+    padding: 7% 10%;
+    background: #F8F9FC;
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.blogs > div {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blogs > div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in;
+    object-position: center;
+    object-fit: cover;
+}
+
+.blogs > div .blog-texts {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 90%;
+    color: #fff;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.blogs > div .blog-texts span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.blogs > div .blog-texts h4 {
+    font-size: 1.4em;
+    margin: 20px 0;
+}
+
+.blogs > div .blog-texts button {
+    border: 1px solid #F9004D;
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+}
+
+.blogs > div .blog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #F9004D, transparent);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.blogs > div:hover .blog-overlay {
+    opacity: 1;
+}
+
+.blogs > div:hover .blog-texts {
+    top: 80%;
+}
+
+.blogs > div:hover img {
+    transform: scale(1.05);
+}
+
+body.dark .blog {
+    background: #111111;
+}
+/* Blog End */
+
+
+/* Contact Section Design */
+.contact {
+    padding: 7% 10%;
+    display: flex;
+    gap: 3em;
+}
+
+.contact > div:first-child {
+    width: 50%;
+}
+
+.contact > div:first-child h2 {
+    font-size: 3.5em;
+    color: #000;
+}
+
+.contact > div:first-child p {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.contact > div:first-child p span {
+    color: #000;
+    font-weight: 500;
+}
+
+.contact > div:first-child form {
+    margin-top: 40px;
+}
+
+.contact > div:first-child form input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: "Poppins", sans-serif;
+    resize: vertical;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.contact > div:first-child form input:focus, textarea:focus {
+    outline-color: #F9004D;
+}
+
+.contact > div:first-child form button {
+    padding: 15px 30px;
+    margin-top: 10px;
+    border: 1px solid #F9004D;
+    color: #fff;
+    background: #F9004D;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact > div:first-child form button:hover {
+    background: transparent;
+    transform: translateY(-5px);
+    color: #F9004D;
+}
+
+.contact > div:last-child {
+    width: 50%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.contact > div:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+body.dark .contact > div:first-child h2 {
+    color: #fff;
+}
+
+body.dark .contact > div:first-child p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark .contact > div:first-child p span {
+    color: #fff;
+}
+
+body.dark .contact > div:first-child form input, textarea {
+    outline-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark .contact > div:first-child form input:focus, textarea:focus {
+    outline-color: #F9004D;
+}
+/* Contact End */
+
+/* Footer Design */
+footer {
+    padding: 2% 5%;
+    background: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-socials a {
+    margin: 0 10px;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    transition: all 0.3s ease-in;
+}
+
+.footer-socials a:hover {
+    background: #F9004D;
+    transform: translateY(-5px);
+    border-color: #F9004D;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+footer p a {
+    color: #F9004D;
+    text-decoration: none;
+}
+
+
+
+header.active {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+header.active .links li a {
+    color: #111111;
+}
+
+header.active .socials a  {
+    color: #111111;
+}
+
+header.active .hire {
+    border-color: #111111;
+    color: #111111;
+}
+
+header.active .hire:hover {
+    border-color: none;
+    color: #fff;
+}
+
+header.active .links li a:hover, .links li a:hover::before {
+    color: #F9004D;
+    width: 100%;
+}
+
+/* When Dark Background is Toggled */
+body.dark header.active {
+    background: #000;
+}
+
+body.dark header.active .links li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark header.active .socials a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark header.active .hire {
+     border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark header.active .links li a:hover, .links li a:hover::before {
+    color: #F9004D;
+    width: 100%;
+}
+
+
+
+
+
+/* Aside Navigation Bar */
+.navigation-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 400px;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.3s ease-in;
+    z-index: 1000;
+}
+
+.close {
+    position: relative;
+    top: 30px;
+    float: right;
+    background: transparent;
+    border: none;
+    color: #111111;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.navigation-bar ul {
+    position: relative;
+    top: 50px;
+    list-style: none;
+}
+
+.navigation-bar ul li {
+    margin: 50px 0;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.navigation-bar ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #F9004D;
+    transition: all 0.3s ease-in;
+}
+
+.navigation-bar ul li a {
+    text-decoration: none;
+    color: #111111;
+}
+
+.navigation-bar ul li:hover::before {
+    width: 100%;
+}
+
+.navigation-bar.active {
+    width: 100%;
+    padding-left: 3em;
+    padding-right: 2em;
+}
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero-overlay {
+        display: block;
+    }
+}
+
+@media (max-width: 1021px) {
+    header > div {
+        gap: 15px;
+    }
+
+    .links li {
+        margin: 0 10px;
+    }
+
+    .socials a {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 900px) {
+    .links {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero-texts h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-texts h2 {
+        font-size: 3em;
+    }
+
+    .hero-texts > span {
+        font-size: 1em;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 5%;
+        padding-bottom: 7%;
+    }
+
+    .about-details {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .about-texts h2 {
+        font-size: 2.2em;
+        margin: 5px 0;
+    }
+
+    .about-texts p {
+        font-size: 1em;
+    }
+
+    .about-details > div > div {
+        font-size: 1em;
+    }
+
+    .service {
+        padding: 7% 5%;
+    }
+
+    .title h2 {
+        font-size: 1.8em;
+    }
+
+    .title p {
+        font-size: 1em;
+    }
+
+    .services > div {
+        background: linear-gradient(to right, #f93600, #F9004D);
+    }
+
+    .services > div h4 {
+        font-size: 1em;
+        color: #fff;
+    }
+
+    .services > div ion-icon {
+        color: #fff;
+    }
+
+    .services > div p {
+        color: #fff;
+    }
+
+    .services > div {
+        padding: 2em 1em;
+    }
+
+    .contact {
+        flex-direction: column-reverse;
+    }
+
+    .contact > div:first-child {
+        width: 100%;
+    }
+
+    .contact > div:last-child {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .footer-socials a  {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 767px) {
+    .hire {
+        display: none;
+    }
+}
