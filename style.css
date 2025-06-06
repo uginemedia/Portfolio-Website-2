@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 120px;
 }
 
 body {
@@ -42,7 +42,6 @@ body.dark .switch-mode button {
     color: #fff;
     box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.2);
 }
-
 /* Switch Mode End */
 
 /* Scroll To Top Design */
@@ -74,7 +73,6 @@ body.dark .scroll-to-top a {
 }
 /* Scroll To Top End */
 
-
 /* Header Design */
 header {
     position: relative;
@@ -97,11 +95,14 @@ header > div {
     width: 50px;
 }
 
+.links {
+    list-style: none;
+}
+
 .links li {
     position: relative;
     display: inline;
     margin: 0 15px;
-    
 }
 
 .links li a {
@@ -183,7 +184,6 @@ body.dark .links li a:hover, .links li a:hover::before {
 body.dark .menu {
     color: #fff;
 }
-
 /* Header End */
 
 /* Hero Section */
@@ -197,7 +197,7 @@ body.dark .menu {
     justify-content: flex-start;
     align-items: center;
     padding: 0 11%;
-    background: url('./img/hero.jpg') no-repeat center center/cover;
+    background: url("./img/hero.jpg") no-repeat center center/cover;
 }
 
 .hero-texts {
@@ -242,11 +242,9 @@ body.dark .menu {
 body.dark .hero-overlay {
     background: rgba(0, 0, 0, 0.5);
 }
-
 /* Hero End */
 
-
-/* About Section Design */
+/* About Design */
 .about {
     margin-top: 90vh;
     display: flex;
@@ -306,7 +304,7 @@ body.dark .about-details {
 }
 /* About End */
 
-/* Service Section Design */
+/* Service Design */
 .service {
     background: #F8F9FC;
     padding: 7% 10%;
@@ -362,7 +360,7 @@ body.dark .about-details {
 }
 
 .services > div:hover {
-    background: linear-gradient(to right, #f93600, #F9004D);
+    background: linear-gradient(to right, #F93600, #F9004D);
     transform: translateY(-10px);
 }
 
@@ -403,11 +401,11 @@ body.dark .services > div p {
 }
 
 body.dark .services > div:hover {
-    background: linear-gradient(to right, #f93600, #F9004D);
+    background: linear-gradient(to right, #F93600, #F9004D);
 }
 /* Service End */
 
-/* Project Section Design */
+/* Project Design */
 .project {
     padding: 7% 10%;
     text-align: center;
@@ -491,7 +489,7 @@ body.dark .services > div:hover {
     transition: all 0.3s ease-in;
 }
 
-.projects > div:hover  .project-overlay {
+.projects > div:hover .project-overlay {
     opacity: 1;
 }
 
@@ -516,7 +514,7 @@ body.dark .services > div:hover {
 }
 /* Project End */
 
-/* Blog Section Design */
+/* Blog Design */
 .blog {
     padding: 7% 10%;
     background: #F8F9FC;
@@ -585,8 +583,8 @@ body.dark .services > div:hover {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #F9004D, transparent);
-    opacity: 0;
     transition: all 0.3s ease-in;
+    opacity: 0;
 }
 
 .blogs > div:hover .blog-overlay {
@@ -606,8 +604,7 @@ body.dark .blog {
 }
 /* Blog End */
 
-
-/* Contact Section Design */
+/* Contact Design */
 .contact {
     padding: 7% 10%;
     display: flex;
@@ -743,67 +740,6 @@ footer p a {
     text-decoration: none;
 }
 
-
-
-header.active {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-
-header.active .links li a {
-    color: #111111;
-}
-
-header.active .socials a  {
-    color: #111111;
-}
-
-header.active .hire {
-    border-color: #111111;
-    color: #111111;
-}
-
-header.active .hire:hover {
-    border-color: none;
-    color: #fff;
-}
-
-header.active .links li a:hover, .links li a:hover::before {
-    color: #F9004D;
-    width: 100%;
-}
-
-/* When Dark Background is Toggled */
-body.dark header.active {
-    background: #000;
-}
-
-body.dark header.active .links li a {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-body.dark header.active .socials a {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-body.dark header.active .hire {
-     border: 1px solid rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.7);
-}
-
-body.dark header.active .links li a:hover, .links li a:hover::before {
-    color: #F9004D;
-    width: 100%;
-}
-
-
-
-
-
 /* Aside Navigation Bar */
 .navigation-bar {
     position: fixed;
@@ -867,12 +803,59 @@ body.dark header.active .links li a:hover, .links li a:hover::before {
     padding-right: 2em;
 }
 
+header.active {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
 
+header.active .links li a {
+    color: #111111;
+}
 
+header.active .socials a {
+    color: #111111;
+}
 
+header.active .hire {
+    border-color: #111111;
+    color: #111111;
+}
 
+header.active .hire:hover {
+    border-color: none;
+    color: #fff;
+}
 
+header.active .links li a:hover, .links li a:hover::before {
+    color: #F9004D;
+    width: 100%;
+}
 
+/* When Dark Background is Toggled */
+body.dark header.active {
+    background: #000;
+}
+
+body.dark header.active .links li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark header.active .socials a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark header.active .hire {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark header.active .links li a:hover, .links li a:hover::before {
+    color: #F9004D;
+    width: 100%;
+}
 
 
 /* Media Queries */
@@ -910,7 +893,7 @@ body.dark header.active .links li a:hover, .links li a:hover::before {
     }
 
     .hero-texts h2 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .hero-texts > span {
@@ -942,10 +925,6 @@ body.dark header.active .links li a:hover, .links li a:hover::before {
         font-size: 1em;
     }
 
-    .service {
-        padding: 7% 5%;
-    }
-
     .title h2 {
         font-size: 1.8em;
     }
@@ -954,8 +933,12 @@ body.dark header.active .links li a:hover, .links li a:hover::before {
         font-size: 1em;
     }
 
+    .service {
+        padding: 7% 5%;
+    }
+
     .services > div {
-        background: linear-gradient(to right, #f93600, #F9004D);
+        background: linear-gradient(to right, #F93600, #F9004D);
     }
 
     .services > div h4 {
@@ -975,8 +958,17 @@ body.dark header.active .links li a:hover, .links li a:hover::before {
         padding: 2em 1em;
     }
 
+    .project {
+        padding: 7% 5%;
+    }
+
+    .blog {
+        padding: 7% 5%;
+    }
+
     .contact {
         flex-direction: column-reverse;
+        padding: 7% 5%;
     }
 
     .contact > div:first-child {
@@ -992,7 +984,7 @@ body.dark header.active .links li a:hover, .links li a:hover::before {
         gap: 2em;
     }
 
-    .footer-socials a  {
+    .footer-socials a {
         padding: 10px;
         font-size: 1em;
     }
